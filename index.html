@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Սամվել · Ծնունդդ շնորհավոր</title>
+<meta name="description" content="Ծննդյան կայք Սամվելի համար · 14 հոկտեմբերի 2006">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Սամվել · Ծնունդդ շնորհավոր">
+<meta property="og:description" content="14 հոկտեմբերի 2006 · Ծննդյան մաղթանքներ">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Noto+Sans+Armenian:wght@400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="balloons" id="balloons" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" class="lang-btn is-active" data-lang="hy">ՀԱՅ</button>
+    <button type="button" class="lang-btn" data-lang="ru">РУС</button>
+  </div>
+
+  <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <p class="hero__eyebrow" data-i18n="eyebrow">14 հոկտեմբերի 2006</p>
+  <h1 class="hero__name">Սամվել</h1>
+
+  <div class="hero__age">
+    <span class="hero__age-num" id="ageNum">20</span>
+    <span class="hero__age-label" data-i18n="ageLabel">տարեկան</span>
+  </div>
+
+  <div class="countdown" id="countdown" role="status" aria-live="polite">
+    <span class="countdown__label" data-i18n="countdownLoading">Հաշվում ենք…</span>
+  </div>
+
+  <button class="btn btn--primary" id="celebrateBtn" type="button" data-i18n="celebrate">🎉 Շնորհավորում եմ</button>
+</header>
+
+<main class="wrap">
+
+  <section class="card greeting">
+    <h2 class="card__title"><span class="card__icon" aria-hidden="true">💌</span><span data-i18n="greetingTitle">Շնորհավորական խոսք</span></h2>
+    <p class="greeting__text" data-i18n="greetingText" lang="hy">
+      Սամվել, ծնունդդ շնորհավոր լինի, ցանկանում գործերում հաջողություն,
+      առողջություն, երջանկություն, երազանքներդ քո բոլոր թող կատարվեն,
+      նպատակներդ դու բոլոր թող հասնես, աշխարհի ամենա լավն և բարին։
+    </p>
+    <details class="greeting__orig">
+      <summary data-i18n="greetingOrigSummary">Բնագրությունը (լատինատառ)</summary>
+      <p>Самвел, цнундт шнорhавор лини, цанканум горцерум hаджохуцюн,
+      арохчуцюн, ерджанкуцюн, еразанкнерт ко болор тох катарвен,
+      нпатакнерит ду болор тох hаснес, ашхhари амена лавн ев барин!</p>
+    </details>
+  </section>
+
+  <section class="card cake-section">
+    <h2 class="card__title"><span class="card__icon" aria-hidden="true">🕯️</span><span data-i18n="cakeTitle">Տորթ</span></h2>
+    <p class="section__hint" data-i18n="cakeHint">Սեղմիր մոմերի վրա, որ փչես։</p>
+
+    <div class="cake-stage">
+      <svg class="cake" viewBox="0 0 320 260" role="img" aria-label="Cake">
+        <ellipse cx="160" cy="238" rx="128" ry="16" fill="#e8eaee"/>
+        <ellipse cx="160" cy="234" rx="128" ry="16" fill="#f4f5f7"/>
+
+        <rect x="44" y="158" width="232" height="76" rx="12" fill="#f6d3b3"/>
+        <rect x="44" y="158" width="232" height="18" rx="9" fill="#e3a173"/>
+        <g fill="#c8362b">
+          <circle cx="70" cy="200" r="4"/><circle cx="108" cy="214" r="4"/>
+          <circle cx="150" cy="200" r="4"/><circle cx="192" cy="214" r="4"/>
+          <circle cx="232" cy="200" r="4"/><circle cx="256" cy="216" r="4"/>
+        </g>
+
+        <rect x="76" y="108" width="168" height="56" rx="12" fill="#fbe3cb"/>
+        <rect x="76" y="108" width="168" height="15" rx="7.5" fill="#e3a173"/>
+        <g fill="#0033a0">
+          <circle cx="104" cy="140" r="3.5"/><circle cx="140" cy="150" r="3.5"/>
+          <circle cx="180" cy="140" r="3.5"/><circle cx="214" cy="150" r="3.5"/>
+        </g>
+
+        <rect x="106" y="74" width="108" height="40" rx="12" fill="#fff1e0"/>
+        <rect x="106" y="74" width="108" height="12" rx="6" fill="#e3a173"/>
+
+        <g id="candles">
+          <g class="candle" data-index="0" transform="translate(128,74)">
+            <rect x="-3" y="-30" width="6" height="30" rx="3" fill="#d90012"/>
+            <rect x="-3" y="-22" width="6" height="5" fill="#fff" opacity=".55"/>
+            <rect x="-3" y="-12" width="6" height="5" fill="#fff" opacity=".55"/>
+            <ellipse class="flame" cx="0" cy="-38" rx="5" ry="9" fill="#f2a800"/>
+            <ellipse class="flame" cx="0" cy="-37" rx="2.4" ry="5" fill="#fff6c9"/>
+          </g>
+          <g class="candle" data-index="1" transform="translate(160,74)">
+            <rect x="-3" y="-34" width="6" height="34" rx="3" fill="#0033a0"/>
+            <rect x="-3" y="-25" width="6" height="5" fill="#fff" opacity=".55"/>
+            <rect x="-3" y="-14" width="6" height="5" fill="#fff" opacity=".55"/>
+            <ellipse class="flame" cx="0" cy="-42" rx="5" ry="9" fill="#f2a800"/>
+            <ellipse class="flame" cx="0" cy="-41" rx="2.4" ry="5" fill="#fff6c9"/>
+          </g>
+          <g class="candle" data-index="2" transform="translate(192,74)">
+            <rect x="-3" y="-30" width="6" height="30" rx="3" fill="#f2a800"/>
+            <rect x="-3" y="-22" width="6" height="5" fill="#fff" opacity=".55"/>
+            <rect x="-3" y="-12" width="6" height="5" fill="#fff" opacity=".55"/>
+            <ellipse class="flame" cx="0" cy="-38" rx="5" ry="9" fill="#f2a800"/>
+            <ellipse class="flame" cx="0" cy="-37" rx="2.4" ry="5" fill="#fff6c9"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <p class="cake-msg" id="cakeMsg" data-i18n="cakeMsg" hidden>🎂 Մաղթանքդ կատարվի՛։</p>
+  </section>
+
+  <section class="card niva-section">
+    <h2 class="card__title"><span class="card__icon" aria-hidden="true">🚙</span><span data-i18n="nivaTitle">Լադա Նիվա 4×4</span></h2>
+    <p class="section__hint" data-i18n="nivaHint">Ծննդյան բոնուս։ Սեղմիր կոճակը ու լսիր ձայնը։</p>
+
+    <div class="niva-stage">
+      <svg class="niva" viewBox="0 0 280 130" role="img" aria-label="Lada Niva 4x4">
+        <ellipse class="niva__shadow" cx="150" cy="118" rx="100" ry="6"/>
+
+        <g fill="#333">
+          <rect x="82" y="23" width="88" height="4" rx="2"/>
+          <rect x="90" y="25" width="4" height="6"/>
+          <rect x="158" y="25" width="4" height="6"/>
+        </g>
+
+        <g class="niva__flag">
+          <rect x="167" y="6" width="2" height="24" fill="#5a5a5a"/>
+          <rect x="169" y="6"  width="20" height="5" fill="#d90012"/>
+          <rect x="169" y="11" width="20" height="5" fill="#0033a0"/>
+          <rect x="169" y="16" width="20" height="5" fill="#f2a800"/>
+        </g>
+
+        <path class="niva__body" d="M48 78 L48 56 L66 30 L178 30 L212 56 L248 58 L248 78 Z"/>
+        <rect x="48" y="71" width="200" height="7" fill="#2b2b2b"/>
+
+        <path class="niva__glass" d="M72 34 L126 34 L126 53 L72 53 Z"/>
+        <path class="niva__glass" d="M132 34 L174 34 L202 53 L132 53 Z"/>
+
+        <line x1="48" y1="56" x2="248" y2="56" stroke="#8f2018" stroke-width="2"/>
+        <line x1="130" y1="56" x2="130" y2="78" stroke="#8f2018" stroke-width="2"/>
+        <rect x="136" y="60" width="12" height="3" rx="1.5" fill="#e8e8e8"/>
+
+        <circle cx="243" cy="64" r="5" fill="#ffe9a8" stroke="#b9a05e" stroke-width="1.5"/>
+        <rect x="240" y="70" width="8" height="4" rx="2" fill="#f2a800"/>
+        <rect x="46" y="58" width="5" height="9" rx="2" fill="#ff5a4d"/>
+
+        <rect x="244" y="72" width="12" height="9" rx="3" fill="#2b2b2b"/>
+        <rect x="42" y="72" width="12" height="9" rx="3" fill="#2b2b2b"/>
+
+        <g transform="translate(86,96)">
+          <g class="wheel">
+            <circle r="18" fill="#1c1c1c"/>
+            <circle r="9" fill="#e2e2e2"/>
+            <g stroke="#9a9a9a" stroke-width="2.5" stroke-linecap="round">
+              <line x1="0" y1="-7" x2="0" y2="7"/>
+              <line x1="-6" y1="-3.5" x2="6" y2="3.5"/>
+              <line x1="-6" y1="3.5" x2="6" y2="-3.5"/>
+            </g>
+            <circle r="3" fill="#7a7a7a"/>
+          </g>
+        </g>
+        <g transform="translate(208,96)">
+          <g class="wheel">
+            <circle r="18" fill="#1c1c1c"/>
+            <circle r="9" fill="#e2e2e2"/>
+            <g stroke="#9a9a9a" stroke-width="2.5" stroke-linecap="round">
+              <line x1="0" y1="-7" x2="0" y2="7"/>
+              <line x1="-6" y1="-3.5" x2="6" y2="3.5"/>
+              <line x1="-6" y1="3.5" x2="6" y2="-3.5"/>
+            </g>
+            <circle r="3" fill="#7a7a7a"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="niva-controls">
+      <button class="btn btn--outline" id="honkBtn" type="button" data-i18n="honk">📣 Բի՛փ</button>
+      <button class="btn btn--outline" id="lightBtn" type="button" data-i18n="lights">💡 Լույսերը</button>
+      <span class="badge" id="nivaBadge" data-i18n="badge">4×4 · 1.7 · ամենագնաց</span>
+    </div>
+  </section>
+
+  <section class="wishes">
+    <h2 class="section__title" data-i18n="wishesTitle">Եվս մի քանի մաղթանք</h2>
+    <div class="wishes__grid">
+      <article class="wish">
+        <span class="wish__icon" aria-hidden="true">🌿</span>
+        <p data-i18n="wish1">Առողջությունը թող միշտ քեզ հետ լինի։</p>
+      </article>
+      <article class="wish">
+        <span class="wish__icon" aria-hidden="true">🏆</span>
+        <p data-i18n="wish2">Ամեն գործ թող հաջողվի։</p>
+      </article>
+      <article class="wish">
+        <span class="wish__icon" aria-hidden="true">✨</span>
+        <p data-i18n="wish3">Երազանքներդ թող իրականանան։</p>
+      </article>
+      <article class="wish">
+        <span class="wish__icon" aria-hidden="true">🛣️</span>
+        <p data-i18n="wish4">Շատ ճամփորդիր և շատ ծիծաղիր։</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<div class="road" aria-hidden="true">
+  <div class="road__stripes"></div>
+  <div class="road__car" id="roadCar">
+    <svg viewBox="0 0 280 130" class="niva niva--small">
+      <g fill="#333">
+        <rect x="82" y="23" width="88" height="4" rx="2"/>
+        <rect x="90" y="25" width="4" height="6"/>
+        <rect x="158" y="25" width="4" height="6"/>
+      </g>
+      <path class="niva__body" d="M48 78 L48 56 L66 30 L178 30 L212 56 L248 58 L248 78 Z"/>
+      <rect x="48" y="71" width="200" height="7" fill="#2b2b2b"/>
+      <path class="niva__glass" d="M72 34 L126 34 L126 53 L72 53 Z"/>
+      <path class="niva__glass" d="M132 34 L174 34 L202 53 L132 53 Z"/>
+      <line x1="48" y1="56" x2="248" y2="56" stroke="#8f2018" stroke-width="2"/>
+      <line x1="130" y1="56" x2="130" y2="78" stroke="#8f2018" stroke-width="2"/>
+      <circle cx="243" cy="64" r="5" fill="#ffe9a8" stroke="#b9a05e" stroke-width="1.5"/>
+      <rect x="244" y="72" width="12" height="9" rx="3" fill="#2b2b2b"/>
+      <rect x="42" y="72" width="12" height="9" rx="3" fill="#2b2b2b"/>
+      <g transform="translate(86,96)"><g class="wheel"><circle r="18" fill="#1c1c1c"/><circle r="9" fill="#e2e2e2"/><g stroke="#9a9a9a" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-7" x2="0" y2="7"/><line x1="-6" y1="-3.5" x2="6" y2="3.5"/><line x1="-6" y1="3.5" x2="6" y2="-3.5"/></g><circle r="3" fill="#7a7a7a"/></g></g>
+      <g transform="translate(208,96)"><g class="wheel"><circle r="18" fill="#1c1c1c"/><circle r="9" fill="#e2e2e2"/><g stroke="#9a9a9a" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-7" x2="0" y2="7"/><line x1="-6" y1="-3.5" x2="6" y2="3.5"/><line x1="-6" y1="3.5" x2="6" y2="-3.5"/></g><circle r="3" fill="#7a7a7a"/></g></g>
+    </svg>
+  </div>
+</div>
+
+<footer class="footer">
+  <p data-i18n="footer">Սիրով՝ ընկերոջդ կողմից · 14.10.2006 → 14.10.2026</p>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
